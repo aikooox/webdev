@@ -1,0 +1,99 @@
+Code Documentation
+Functions
+joinCall()
+Function to join the video call by entering a username.
+Initializes the WebSocket connection and sets up the video call interface.
+startVideoCall()
+Function to start the video call.
+Accesses local media (camera and microphone) and sets up WebRTC peer connection for the video call.
+endCall()
+Function to end the video call.
+Closes the WebRTC connection and resets the video call interface.
+toggleMute()
+Function to mute or unmute the user's microphone.
+Toggles the audio track enabled state.
+handleKeyPress(event)
+Event handler for handling keypress events, specifically for form submissions on Enter key press.
+Event Handlers
+socket.onopen
+Handles WebSocket connection confirmation.
+socket.onmessage
+Receives and processes incoming messages related to video call signaling.
+socket.onerror
+Handles WebSocket errors.
+Initialization
+window.onload = setup: Event listener to set up initial event listeners when the window loads.
+Conclusion
+The WebSocket Video Call application provides a user-friendly interface for joining a video call and interacting with basic call controls. Users can join a video call, mute/unmute their microphone, and end the call, all managed in real-time via WebSocket and WebRTC.
+
+SERVER.JS
+Main Objective
+The main objective of this application is to provide users with a real-time interactive video call platform where they can join a server and engage in video calls with other users within the same server.
+
+Functionalities and Features
+WebSocket Connection
+Establishes a WebSocket connection to the server using ws://localhost:8080.
+Handles events like onopen for connection confirmation and onmessage for receiving and displaying messages related to video call signaling.
+Server and Call Management
+Allows users to join a server, enter a username, and start a video call.
+Maintains server information using local storage for future reference.
+User Interaction
+Users can join a selected server, enter a username, and start a video call.
+Supports muting/unmuting the microphone and ending the video call.
+User Interface
+Provides a user-friendly interface with sections for joining a server, entering usernames, and displaying video streams.
+Dynamically updates the interface based on user actions like joining a server or starting/ending a video call.
+Program Structure
+WebSocket Connection
+Creates a WebSocket instance and handles connection events and message reception.
+Server and Call Management
+Functions for saving server information, joining a server, and managing video calls.
+User Interaction
+Functions for joining a server, starting a video call, muting/unmuting the microphone, and ending a video call.
+User Interface and Display
+Functions for displaying video streams and updating the UI based on user actions.
+Code Documentation
+Global Variables
+socket: WebSocket instance for server communication.
+localStream: MediaStream instance for local video.
+remoteStream: MediaStream instance for remote video.
+peerConnection: RTCPeerConnection instance for WebRTC.
+isMuted: Boolean variable to track the mute state of the microphone.
+Event Handlers
+socket.onopen: Handles WebSocket connection confirmation.
+socket.onmessage: Receives and processes incoming messages for video call signaling.
+socket.onerror: Handles WebSocket errors.
+Functions
+joinCall(): Allows users to join a video call by entering a username.
+startVideoCall(): Sets up local media and WebRTC peer connection for the video call.
+endCall(): Ends the video call and resets the UI.
+toggleMute(): Mutes or unmutes the user's microphone.
+handleKeyPress(event): Handles key press events (Enter key) for form submissions.
+Initialization
+window.onload = setup: Sets up initial event listeners when the window is loaded.
+By following the program structure and utilizing the documented functionalities, users can interact with the video call application seamlessly and engage in real-time video communication with basic call controls.
+
+CSS
+Main Objective
+The main objective of the provided CSS code is to create a user interface for a video call application. The code sets the styling and layout for various elements like the join call button, video containers, input fields, and call control buttons to provide a visually appealing user interface for a video call application.
+
+Functionalities and Features
+Styling and Layout
+Sets the font family, background color, margins, and padding for the entire body of the application.
+Defines the container layout with specific dimensions, padding, background color, border radius, and box shadow for a visually pleasing presentation.
+Header Section
+Aligns the header text to the center and sets the color to a specific shade of blue (#007bff).
+Join Call Section
+Formats the join call section with margins and input field styles.
+Styles the join call button with padding, background color, text color, border, border radius, and hover effects.
+Video Call Area
+Sets styling for the video call area including padding, border, border radius, background color, height, overflow behavior, and margin.
+Formats video containers with specific margins and padding for better layout and visibility.
+Call Control Buttons
+Styles the mute/unmute and end call buttons with padding, font size, background color, text color, border, border radius, and cursor style.
+Provides hover effects for better user interaction feedback.
+Program Structure and Code Documentation
+The provided code primarily focuses on defining the layout and styling of the user interface elements for the video call application.
+It structures different sections of the interface such as the join call section, video call area, input fields, and control buttons with specific CSS properties.
+Each CSS rule targets a particular element or section of the application, ensuring consistent styling across the entire interface.
+The code establishes a visually cohesive design by using colors, padding, borders, and spacing effectively.
